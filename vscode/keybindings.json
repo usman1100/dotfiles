@@ -1,0 +1,32 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "extension.advancedNewFile"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "-workbench.action.search.toggleQueryDetails",
+    "when": "inSearchEditor || searchViewletFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "eslint.executeAutofix"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "editor.action.formatDocument"
+  },
+  {
+    "key": "ctrl+]",
+    "command": "typescript.removeUnusedImports"
+  }
+]

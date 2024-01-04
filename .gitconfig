@@ -1,0 +1,12 @@
+[user]
+	email = u.ahmed@abysssolutions.com.au
+	name = usman-abyss
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+
+[alias]
+	co = checkout
+[core]
+	symlinks = true
