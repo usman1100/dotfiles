@@ -1,51 +1,53 @@
 {
-  "window.menuBarVisibility": "toggle",
-  "editor.fontFamily": "'Input Mono', 'Jetbrains Mono', 'Droid Sans Mono', 'monospace', monospace",
-  "editor.minimap.enabled": false,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.cursorBlinking": "blink",
-  "editor.cursorStyle": "block",
-  "editor.wordWrap": "on",
-  "explorer.confirmDelete": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "extensions.ignoreRecommendations": true,
-  "workbench.list.smoothScrolling": true,
-  "editor.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false,
-    "php": true
-  },
-  "window.commandCenter": false,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "explorer.confirmDragAndDrop": false,
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "git.autofetch": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "window.zoomLevel": 2,
-  "terminal.integrated.env.linux": {},
-  "gitlens.currentLine.enabled": false,
-  "workbench.colorTheme": "SynthWave '84",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.lineHeight": 1.6,
-  "workbench.iconTheme": "vscode-icons"
-}
+    "window.menuBarVisibility": "toggle",
+    "editor.fontFamily": "'Fira Code', 'Input Mono', 'Jetbrains Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.minimap.enabled": false,
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.cursorBlinking": "blink",
+    "editor.cursorStyle": "block",
+    "editor.wordWrap": "on",
+    "explorer.confirmDelete": false,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "extensions.ignoreRecommendations": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "github.copilot.enable": {
+      "*": true,
+      "plaintext": false,
+      "markdown": true,
+      "scminput": false,
+      "php": true
+    },
+    "window.commandCenter": false,
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.autofetch": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.zoomLevel": 2,
+    "terminal.integrated.env.linux": {},
+    "gitlens.currentLine.enabled": false,
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.lineHeight": 2.4,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.stickyScroll.enabled": false,
+    "editor.fontWeight": "500"
+  }
