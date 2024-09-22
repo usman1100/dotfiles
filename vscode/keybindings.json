@@ -1,32 +1,96 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  {
-    "key": "ctrl+n",
-    "command": "workbench.action.files.newUntitledFile"
-  },
-  {
-    "key": "ctrl+alt+n",
-    "command": "extension.advancedNewFile"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "-workbench.action.search.toggleQueryDetails",
-    "when": "inSearchEditor || searchViewletFocus"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "workbench.action.closeOtherEditors"
-  },
-  {
-    "key": "ctrl+;",
-    "command": "eslint.executeAutofix"
-  },
-  {
-    "key": "ctrl+;",
-    "command": "editor.action.formatDocument"
-  },
-  {
-    "key": "ctrl+]",
-    "command": "typescript.removeUnusedImports"
-  }
-]
+    {
+      "key": "ctrl+n",
+      "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+      "key": "ctrl+alt+n",
+      "command": "extension.advancedNewFile"
+    },
+    {
+      "key": "ctrl+shift+j",
+      "command": "-workbench.action.search.toggleQueryDetails",
+      "when": "inSearchEditor || searchViewletFocus"
+    },
+    {
+      "key": "ctrl+shift+j",
+      "command": "workbench.action.closeOtherEditors"
+    },
+    {
+      "key": "ctrl+;",
+      "command": "eslint.executeAutofix"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "editor.action.formatDocument"
+    },
+    {
+      "key": "ctrl+]",
+      "command": "typescript.removeUnusedImports"
+    },
+    {
+      "key": "ctrl+shift+alt+i",
+      "command": "-workbench.action.quickchat.toggle",
+      "when": "chatIsEnabled"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-composer.startComposerControlPanel",
+      "when": "composerIsEnabled && isComposerControlPanelEnabled"
+    },
+    {
+      "key": "ctrl+y",
+      "command": "-editor.action.inlineDiffs.acceptPartialEdit",
+      "when": "editorTextFocus && (arbitrary function)"
+    },
+    {
+      "key": "ctrl+y",
+      "command": "-aichat.newfollowupaction"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-workbench.action.toggleDevTools",
+      "when": "isDevelopment"
+    },
+    {
+      "key": "ctrl+; ctrl+shift+i",
+      "command": "-testing.toggleInlineCoverage"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-controlPanel.openControlPanel"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-notebook.formatCell",
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-editor.action.formatDocument",
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-editor.action.formatDocument.none",
+      "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-notebook.format",
+      "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+      "key": "ctrl+y",
+      "command": "-redo"
+    },
+    {
+      "key": "ctrl+y",
+      "command": "redo"
+    },
+    {
+      "key": "ctrl+shift+z",
+      "command": "-redo"
+    }
+  ]
