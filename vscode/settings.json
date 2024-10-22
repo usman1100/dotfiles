@@ -49,5 +49,9 @@
     "editor.lineHeight": 2.4,
     "workbench.iconTheme": "vscode-icons",
     "editor.stickyScroll.enabled": false,
-    "editor.fontWeight": "500"
+    "editor.fontWeight": "500",
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.activityBar.location": "top",
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false
   }
