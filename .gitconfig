@@ -1,12 +1,7 @@
 [user]
-	email = u.ahmed@abysssolutions.com.au
-	name = usman-abyss
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
-
+	name = usman1100
+	email = usmanahmed1100@gmail.com
 [alias]
 	co = checkout
-[core]
-	symlinks = true
+[init]
+	defaultBranch = main
