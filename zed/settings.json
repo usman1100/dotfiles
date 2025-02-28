@@ -1,0 +1,26 @@
+{
+  "project_panel": {
+    "dock": "right"
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "languages": {
+    "HEEX": {
+      "show_edit_predictions": false
+    }
+  },
+
+  "cursor_shape": "block",
+  "ui_font_size": 18,
+  "buffer_font_size": 20,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Andromeda"
+  },
+  "buffer_line_height": {
+    "custom": 2
+  }
+}
+
