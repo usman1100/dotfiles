@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Backup copies that editors and tools leave behind
+*.orig
+*.bak
+*~
+
+# App data that lives inside linked config folders
+zed/prompts/
+zed/conversations/
+zed/embeddings/
+zed/*.mdb
+
+# Secrets never go in this repo. They live in ~/.secrets (see README)
+.secrets/
+*.key
+*.pem
+.env
+.env.*
