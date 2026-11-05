@@ -1,26 +1,127 @@
 // Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
+// Lives in ~/repos/dotfiles/zed/settings.json
+// All defaults: run `zed: open default settings` from the command palette.
 {
+  // ─── Look ──────────────────────────────────────────────
+  // Follows macOS: Moon when dark, Dawn when light
+  "theme": {
+    "mode": "system",
+    "light": "Rosé Pine Dawn",
+    "dark": "Rosé Pine Moon",
+  },
+  "auto_install_extensions": {
+    "rose-pine-theme": true,
+  },
+  "icon_theme": "VSCode Great Icons Theme",
+
+  // ─── Type ──────────────────────────────────────────────
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 16.0,
+  "buffer_line_height": { "custom": 2.3 },
+  "ui_font_size": 18,
+  "soft_wrap": "editor_width",
+
+  // ─── Cursor and motion ─────────────────────────────────
+  "cursor_shape": "block",
+  "cursor_blink": true,
+  "cursor_animation": { "enabled": true },
+
+  // ─── Window: no tabs, no toolbars, no buttons ─────────
+  "tab_bar": { "show": false },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false,
+  },
+  "title_bar": {
+    "show_branch_name": false,
+    "show_worktree_name": false,
+    "show_project_items": false,
+    "show_onboarding_banner": false,
+    "show_user_picture": false,
+    "show_user_menu": false,
+    "show_sign_in": false,
+  },
+  "status_bar": { "experimental.show": false },
+
+  // ─── Editor: just your text ────────────────────────────
+  "gutter": {
+    "line_numbers": false,
+    "runnables": false,
+    "bookmarks": false,
+    "breakpoints": false,
+    // Fold arrows only show on hover; they also give the text room to breathe
+    "folds": true,
+    "min_line_number_digits": 0,
+  },
+  // Git marks in the gutter: green added, yellow changed, red deleted
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": { "enabled": false },
+  },
+  "indent_guides": { "enabled": false },
+  "scrollbar": {
+    "show": "system",
+    "cursors": false,
+    "git_diff": false,
+    "selected_text": false,
+    "selected_symbol": false,
+    "diagnostics": "none",
+    "axes": { "horizontal": false },
+  },
+  "minimap": { "show": "never" },
+  "sticky_scroll": { "enabled": false },
+  "current_line_highlight": "none",
+  "selection_highlight": false,
+  "show_whitespaces": "none",
+  "inline_code_actions": false,
+  "lsp_document_colors": "none",
+  // Popups only when you mean it: rest the mouse to see hovers,
+  // hold ⌃⌥ to see inlay hints
+  "hover_popover_delay": 800,
+  "inlay_hints": {
+    "toggle_on_modifiers_press": { "control": true, "alt": true },
+  },
+
+  // ─── Panels ────────────────────────────────────────────
   "project_panel": {
     "dock": "left",
+    "button": false,
+    "file_icons": true,
+    "folder_indicator": "chevron",
+    "git_status": false,
+    "show_diagnostics": "off",
+    "indent_size": 16,
+    "indent_guides": { "show": "never" },
+    "scrollbar": { "show": "never" },
+    "sticky_scroll": false,
   },
   "outline_panel": {
     "dock": "left",
+    "file_icons": false,
+    "git_status": false,
+    "indent_guides": { "show": "never" },
   },
-  "collaboration_panel": {
-    "dock": "left",
-  },
+  "collaboration_panel": { "dock": "left" },
   "git_panel": {
+    "group_by": "status",
+    "tree_view": true,
     "dock": "left",
     "sort_by_path": false,
   },
-  "icon_theme": "VSCode Great Icons Theme",
+  "file_finder": { "file_icons": false },
+
+  // ─── Terminal (same as your Ghostty) ───────────────────
+  "terminal": {
+    "font_size": 14,
+    "font_fallbacks": ["Lilex Nerd Font Mono"],
+    "line_height": { "custom": 1.5 },
+    "button": false,
+    "toolbar": { "breadcrumbs": false },
+    "scrollbar": { "show": "never" },
+  },
+
+  // ─── Agent (local model via Ollama) ────────────────────
   "agent": {
     "dock": "right",
     "default_model": {
@@ -31,29 +132,45 @@
     "favorite_models": [],
     "model_parameters": [],
   },
+
+  // ─── Behaviour ─────────────────────────────────────────
   "base_keymap": "VSCode",
-  "status_bar": {
-    "experimental.show": false,
-  },
-  "sticky_scroll": {
-    "enabled": false,
-  },
-  "buffer_line_height": {
-    "custom": 2.3,
-  },
-  "minimap": {
-    "show": "never",
-  },
-  "cursor_shape": "block",
-  "cursor_blink": true,
-  "buffer_font_fallbacks": ["JetBrains Mono"],
-  "buffer_font_family": "JetBrains Mono",
-  "soft_wrap": "editor_width",
-  "ui_font_size": 18,
-  "buffer_font_size": 16.0,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark Pro",
+  "cli_default_open_behavior": "new_window",
+  "suggest_extensions": false,
+
+  // ─── Colours: remove the last lines, rose cursor ───────
+  "theme_overrides": {
+    "Rosé Pine Moon": {
+      "border": "#00000000",
+      "border.variant": "#00000000",
+      "panel.focused_border": "#00000000",
+      "pane.focused_border": "#00000000",
+      "scrollbar.thumb.background": "#6e6a8655",
+      "scrollbar.thumb.border": "#00000000",
+      "element.selected": "#817c9c33",
+      "ghost_element.selected": "#817c9c33",
+      "ghost_element.hover": "#817c9c1f",
+      // No highlight on matching brackets or other uses of a word
+      "editor.document_highlight.bracket_background": "#00000000",
+      "editor.document_highlight.read_background": "#00000000",
+      "editor.document_highlight.write_background": "#00000000",
+      "players": [{ "cursor": "#ea9a97", "background": "#ea9a97" }],
+    },
+    "Rosé Pine Dawn": {
+      "border": "#00000000",
+      "border.variant": "#00000000",
+      "panel.focused_border": "#00000000",
+      "pane.focused_border": "#00000000",
+      "scrollbar.thumb.background": "#9893a555",
+      "scrollbar.thumb.border": "#00000000",
+      "element.selected": "#6e6a861f",
+      "ghost_element.selected": "#6e6a861f",
+      "ghost_element.hover": "#6e6a8614",
+      // No highlight on matching brackets or other uses of a word
+      "editor.document_highlight.bracket_background": "#00000000",
+      "editor.document_highlight.read_background": "#00000000",
+      "editor.document_highlight.write_background": "#00000000",
+      "players": [{ "cursor": "#d7827e", "background": "#d7827e" }],
+    },
   },
 }

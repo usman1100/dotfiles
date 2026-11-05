@@ -1,5 +1,7 @@
-font-size = 16
-adjust-cell-height = 5
+font-size = 14
+adjust-cell-height = 10
 cursor-style = block
 shell-integration-features = no-cursor
-
+font-family = JetBrains Mono
+theme = Calamity
+# custom-shader = ~/.config/ghostty/shaders/shader.glsl

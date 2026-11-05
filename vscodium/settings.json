@@ -1,0 +1,138 @@
+{
+  // ─── Look ──────────────────────────────────────────────
+  // Follows macOS: Moon when dark, Dawn when light
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.preferredDarkColorTheme": "Rosé Pine Moon",
+  "workbench.preferredLightColorTheme": "Rosé Pine Dawn",
+  "workbench.iconTheme": null,
+
+  // ─── Type (same as your Zed) ───────────────────────────
+  "editor.fontFamily": "'JetBrains Mono', Menlo, monospace",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 2.3,
+  "editor.fontLigatures": true,
+  "editor.suggestLineHeight": 28,
+
+  // ─── Cursor and motion ─────────────────────────────────
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+
+  // ─── Window: no bars, no tabs, no buttons ──────────────
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.showTabs": "none",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "breadcrumbs.enabled": false,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "workbench.browser.showInTitleBar": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  // Title shows only the file name, with a dot when unsaved
+  "window.title": "${dirty}${activeEditorShort}",
+
+  // ─── Editor: just your text ────────────────────────────
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "off",
+  "editor.glyphMargin": false,
+  "editor.lineDecorationsWidth": 20,
+  "editor.foldingHighlight": false,
+  "editor.padding.top": 16,
+  "editor.renderLineHighlight": "none",
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+  "editor.matchBrackets": "never",
+  "editor.guides.indentation": false,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.stickyScroll.enabled": false,
+  "editor.codeLens": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.colorDecorators": false,
+  "editor.suggest.showIcons": false,
+  "editor.wordWrap": "on",
+  "editor.overviewRulerLanes": 0,
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.scrollbar.horizontal": "hidden",
+  // Git marks in the gutter: green added, yellow changed, red deleted
+  "scm.diffDecorations": "gutter",
+  // Popups only when you ask: hold ⌘ to see hovers,
+  // hold ⌃⌥ to see inlay hints
+  "editor.hover.enabled": "onKeyboardModifier",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+
+  // ─── Side bar and panel ────────────────────────────────
+  "explorer.openEditors.visible": 0,
+  "explorer.decorations.badges": false,
+  "explorer.decorations.colors": false,
+  "workbench.tree.indent": 14,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.panel.showLabels": false,
+
+  // ─── Terminal (same as your Ghostty) ───────────────────
+  "terminal.integrated.fontFamily": "'JetBrains Mono', 'Lilex Nerd Font Mono'",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.initialHint": false,
+  // Fresh terminal each time, no "History restored" badge
+  "terminal.integrated.enablePersistentSessions": false,
+
+  // ─── Silence: no welcome, tips, AI or nagging ──────────
+  "chat.disableAIFeatures": true,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.welcomePage.walkthroughs.openOnInstall": false,
+  "workbench.welcomePage.extraAnnouncements": false,
+  "extensions.ignoreRecommendations": true,
+  "update.showReleaseNotes": false,
+
+  // ─── Zen mode (⌘K Z): full screen + centred text ───────
+  "zenMode.centerLayout": true,
+  "zenMode.showTabs": "none",
+  "workbench.editor.centeredLayoutFixedWidth": true,
+
+  // ─── Colours: remove the last lines, add soft depth ────
+  "workbench.colorCustomizations": {
+    "[Rosé Pine Moon]": {
+      "editorCursor.foreground": "#ea9a97",
+      "editorCursor.background": "#232136",
+      "terminalCursor.foreground": "#ea9a97",
+      "titleBar.activeForeground": "#6e6a86",
+      "titleBar.inactiveForeground": "#44415a",
+      "sideBarSectionHeader.border": "#0000",
+      "editorWidget.border": "#817c9c26",
+      "editorHoverWidget.border": "#817c9c26",
+      "widget.shadow": "#00000059",
+      "scrollbar.shadow": "#0000",
+      "editorLineNumber.foreground": "#44415a",
+      "editorLineNumber.activeForeground": "#908caa",
+      "editorGutter.modifiedBackground": "#f6c177"
+    },
+    "[Rosé Pine Dawn]": {
+      "editorCursor.foreground": "#d7827e",
+      "editorCursor.background": "#faf4ed",
+      "terminalCursor.foreground": "#d7827e",
+      "titleBar.activeForeground": "#9893a5",
+      "titleBar.inactiveForeground": "#cecacd",
+      "sideBarSectionHeader.border": "#0000",
+      "editorWidget.border": "#6e6a8614",
+      "editorHoverWidget.border": "#6e6a8614",
+      "widget.shadow": "#5752791f",
+      "scrollbar.shadow": "#0000",
+      "editorLineNumber.foreground": "#cecacd",
+      "editorLineNumber.activeForeground": "#797593",
+      "editorGutter.modifiedBackground": "#ea9d34"
+    }
+  }
+}
