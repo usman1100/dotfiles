@@ -1,26 +1,64 @@
-# Add deno completions to search path
-# if [[ ":$FPATH:" != *":/home/usman/completions:"* ]]; then export FPATH="/home/usman/completions:$FPATH"; fi
-# Add deno completions to search path
+# ~/.zshrc
+# This is a link. The real file is ~/repos/dotfiles/zsh/zshrc
+
+typeset -U path fpath   # keep PATH and fpath free of duplicates
+
+# ─── Oh My Zsh ───────────────────────────────────────────
+# Deno completions must be on fpath before Oh My Zsh runs compinit
+fpath=("$HOME/.zsh/completions" $fpath)
+
 export ZSH="$HOME/.oh-my-zsh"
-
 ZSH_THEME="robbyrussell"
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting z)
+source "$ZSH/oh-my-zsh.sh"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
+# ─── Aliases ─────────────────────────────────────────────
 alias c=clear
 alias lg=lazygit
 alias gpo="git push origin"
 alias gpl="git pull origin"
-alias zed="flatpak run dev.zed.Zed"
+alias n=nvim
+alias done_reminder="afplay /System/Library/Sounds/Blow.aiff"
+alias claude-personal='CLAUDE_CONFIG_DIR=$HOME/.claude-personal claude'
 
-source $ZSH/oh-my-zsh.sh
-export PATH="$HOME/.rbenv/bin:$PATH"
+# ─── Editor ──────────────────────────────────────────────
+# --wait makes git, crontab and others wait until you close the file
+export EDITOR='zed --wait'
 
+# ─── Languages ───────────────────────────────────────────
+# Node (nvm)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-eval "$(zoxide init zsh)";
-eval "$(rbenv init -)"
+# Deno
+[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
 
-export EDITOR='vim'
+# Java (Homebrew openjdk), your own scripts, psql (Homebrew libpq)
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Python (pyenv)
+export PATH="$HOME/.pyenv/shims:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# uv and other tools in ~/.local/bin
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+
+# ─── AI tools ────────────────────────────────────────────
+export PATH="$HOME/.opencode/bin:$PATH"
+export PATH="$PATH:$HOME/.lmstudio/bin"
+export PATH="$HOME/.kilo/bin:$PATH"
+
+# Bun (also used by OMP)
+export PATH="$HOME/.bun/bin:$PATH"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# ─── Private settings for this Mac only (never in git) ──
+[ -f "$HOME/.secrets/env.zsh" ] && source "$HOME/.secrets/env.zsh"
+
+# ─── SDKMAN: must stay at the very end ──────────────────
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
